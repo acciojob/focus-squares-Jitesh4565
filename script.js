@@ -10,7 +10,14 @@ function changeColor(event){
 		}
 	});
 }
+  function revertColor(event){
+	  let squares=document.querySelectorAll('.square');
+	  squares.forEach(function(square){
+		  square.style.backgroundColor='#E6E6FA';
+	  });
+  }
   let squares=document.querySelectorAll('.square');
     squares.forEach(function(square){
-	  square.addEventListener('mouseover',changeColor);
+	square.addEventListener('mouseover',changeColor);
+	square.addEventListener('mouseout',revertColor);
 	});
